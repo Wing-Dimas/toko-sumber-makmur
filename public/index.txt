@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <div class="container">
+          <h1>TOKO SUMBER MAKMUR</h1>
+          <h1>Administrasi</h1>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pelanggan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Barang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pemesanan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Admin</a>
+            </li>
+          </ul>
+          <span class="navbar-text"> Dimas Wing </span>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container mt-5">
+      <section class="top-wrapper">
+        <h1>Dashboard</h1>
+      </section>
+
+      <hr />
+
+      <section class="content-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-3 col-sm-12 col-md-6 mt-5">
+              <a href="" class="card barang">
+                <div class="card-heading">
+                  <div class="icon">
+                    <i class="fas fa-box-open"></i>
+                  </div>
+                  <div class="info">
+                    <h1 class="value">25</h1>
+                    <span class="text">Stok Barang</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <span>Lihat Detail</span>
+                  <span><i class="far fa-arrow-alt-circle-right"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-xl-3 col-sm-12 col-md-6 mt-5">
+              <a href="" class="card barang-keluar">
+                <div class="card-heading">
+                  <div class="icon">
+                    <i class="fas fa-arrow-up"></i>
+                  </div>
+                  <div class="info">
+                    <h1 class="value">10</h1>
+                    <span class="text">Barang Keluar hari ini</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <span>Lihat Detail</span>
+                  <span><i class="far fa-arrow-alt-circle-right"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-xl-3 col-sm-12 col-md-6 mt-5">
+              <a href="" class="card pelanggan">
+                <div class="card-heading">
+                  <div class="icon">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <div class="info">
+                    <h1 class="value">15</h1>
+                    <span class="text">Jumlah Pelanggan</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <span>Lihat Detail</span>
+                  <span><i class="far fa-arrow-alt-circle-right"></i></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-xl-3 col-sm-12 col-md-6 mt-5">
+              <a href="" class="card income">
+                <div class="card-heading">
+                  <div class="icon">
+                    <i class="fas fa-coins"></i>
+                  </div>
+                  <div class="info">
+                    <h1 class="value">Rp.0.00</h1>
+                    <span class="text">Income</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <span>Lihat Detail</span>
+                  <span><i class="far fa-arrow-alt-circle-right"></i></span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-3 col-sm-12 col-md-6 mt-5">
+              <a href="" class="card karyawan">
+                <div class="card-heading">
+                  <div class="icon">
+                    <i class="fas fa-user-tie"></i>
+                  </div>
+                  <div class="info">
+                    <h1 class="value">5</h1>
+                    <span class="text">Jumlah Barang</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <span>Lihat Detail</span>
+                  <span><i class="far fa-arrow-alt-circle-right"></i></span>
+                </div>
+              </a>
+            </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="mt-5">
+        <span>&copy;copyrigt 2021</span>
+    </footer>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/edc17df4e6.js" crossorigin="anonymous"></script>
+  </body>
+</html>

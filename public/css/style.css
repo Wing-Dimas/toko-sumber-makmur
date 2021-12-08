@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.login-page {
+  background: #283038;
+}
+.login-page h1 {
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.login-page .box {
+  width: 100%;
+}
+.login-page .container {
+  height: 100vh;
+  padding-top: 15vh;
+}
+
+.login-page .box {
+  margin: 50px auto 0px;
+  padding: 10px;
+  width: 360px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: space-around;
+}
+
+.login-page .box input {
+  background-color: #373f4a;
+  outline: none;
+  border: none;
+  padding: 5px 15px 0 60px;
+  color: white;
+}
+
+.login-page .box > * {
+  margin-bottom: 20px;
+}
+
+.login-page .box button {
+  background-color: #33a6e0;
+  color: white;
+  font-weight: 500;
+}
+
+.login-page .box label {
+  position: relative;
+}
+.login-page .box label span {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  font-size: 25px;
+  color: white;
+}
+header .logo {
+  background: #2a3d4f;
+  color: #fff;
+  height: 72px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .logo h1 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 72px;
+}
+
+.top-wrapper {
+  text-align: center;
+}
+.top-wrapper h1 {
+  font-weight: 700;
+}
+
+.content-wrapper .card {
+  display: block;
+  text-decoration: none;
+  border-radius: 10px;
+}
+.content-wrapper .card .card-heading {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px 0 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.content-wrapper .card .card-heading .icon {
+  font-size: 3em;
+}
+.content-wrapper .card .card-heading .info {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.content-wrapper .card .card-heading .value {
+  font-size: 2.5em;
+  font-weight: 600;
+  line-height: 20px;
+}
+.content-wrapper .card .card-heading .text {
+  font-size: 0.9em;
+}
+.content-wrapper .card .card-body {
+  display: flex;
+  justify-content: space-between;
+}
+.content-wrapper .card {
+  transition: 0.5s all;
+}
+.content-wrapper .card:hover {
+  box-shadow: 0px 15px 30px 7px rgba(204, 204, 204, 0.61);
+}
+
+.content-wrapper .card.barang .card-heading {
+  background-color: #3d73ff;
+}
+.content-wrapper .card.barang .card-body {
+  color: #3d73ff;
+}
+.content-wrapper .card.barang-keluar .card-heading {
+  background-color: #feb11b;
+}
+.content-wrapper .card.barang-keluar .card-body {
+  color: #feb11b;
+}
+.content-wrapper .card.pelanggan .card-heading {
+  background-color: #88c73e;
+}
+.content-wrapper .card.pelanggan .card-body {
+  color: #88c73e;
+}
+.content-wrapper .card.income .card-heading {
+  background-color: #214399;
+}
+.content-wrapper .card.income .card-body {
+  color: #214399;
+}
+.content-wrapper .card.income .card-heading .value {
+  font-size: 1.2em;
+}
+.content-wrapper .card.karyawan .card-heading {
+  background-color: #640f8b;
+}
+.content-wrapper .card.karyawan .card-body {
+  color: #640f8b;
+}
+
+footer {
+  text-align: center;
+  height: 100px;
+  color: #fff;
+  background-color: #283038;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.data {
+  background-color: #fffbfb;
+  min-height: 80vh;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.data h2 {
+  background-color: #2a3d4f;
+  color: #fff;
+  font-size: 1.4em;
+  padding: 10px 15px;
+}
+
+.data .button {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.data .table-container {
+  overflow: auto;
+}
+
+.data .table-container table {
+  min-width: 1000px;
+}
