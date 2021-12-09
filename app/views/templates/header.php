@@ -32,16 +32,16 @@
               <a class="nav-link" href="<?=BASEURL ?>/dashboard">Dashboard <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pelanggan</a>
+              <a class="nav-link" href="<?=BASEURL ?>/pelanggan/pelanggan">Pelanggan</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?=BASEURL ?>/data_toko/barang">Barang</a>
+              <a class="nav-link" href="<?=BASEURL ?>/barang/barang">Barang</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pemesanan</a>
+              <a class="nav-link" href="<?=BASEURL ?>/pemesanan/pemesanan">Pemesanan</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Admin</a>
+              <a class="nav-link" href="<?=BASEURL ?>/karyawan/karyawan">Karyawan</a>
             </li>
           </ul>
           <span class="navbar-text"> Dimas Wing </span>

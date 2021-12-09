@@ -6,6 +6,6 @@
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
-          <button type="button" class="btn btn-success btn-sm"><i class="fas fa-plus"></i> Tambah data</button>
+          <a href="<?= BASEURL ?>/data_toko/tambah/<?= $data["add"] ?>" class="btn btn-success btn-sm"><i class="fas fa-plus"></i> Tambah data</a>
         </div>
         <div class="table-container mt-5">

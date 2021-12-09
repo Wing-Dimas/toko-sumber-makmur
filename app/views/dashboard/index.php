@@ -9,13 +9,13 @@
         <div class="container">
           <div class="row">
             <div class="col-xl-3 col-sm-12 col-md-6 mt-5">
-              <a href="" class="card barang">
+              <a href="<?= BASEURL ?>/data_toko/barang" class="card barang">
                 <div class="card-heading">
                   <div class="icon">
                     <i class="fas fa-box-open"></i>
                   </div>
                   <div class="info">
-                    <h1 class="value">25</h1>
+                    <h1 class="value"><?= $data["barang"]["stok"] ?></h1>
                     <span class="text">Stok Barang</span>
                   </div>
                 </div>
@@ -26,7 +26,7 @@
               </a>
             </div>
             <div class="col-xl-3 col-sm-12 col-md-6 mt-5">
-              <a href="" class="card barang-keluar">
+              <a href="<?= BASEURL ?>/data_toko/barang" class="card barang-keluar">
                 <div class="card-heading">
                   <div class="icon">
                     <i class="fas fa-arrow-up"></i>
@@ -43,13 +43,13 @@
               </a>
             </div>
             <div class="col-xl-3 col-sm-12 col-md-6 mt-5">
-              <a href="" class="card pelanggan">
+              <a href="<?= BASEURL ?>/data_toko/pelanggan" class="card pelanggan">
                 <div class="card-heading">
                   <div class="icon">
                     <i class="fas fa-users"></i>
                   </div>
                   <div class="info">
-                    <h1 class="value">15</h1>
+                    <h1 class="value"><?= $data["pelanggan"]["total"] ?></h1>
                     <span class="text">Jumlah Pelanggan</span>
                   </div>
                 </div>
@@ -60,13 +60,13 @@
               </a>
             </div>
             <div class="col-xl-3 col-sm-12 col-md-6 mt-5">
-              <a href="" class="card income">
+              <a href="<?= BASEURL ?>/data_toko/pemesanan" class="card income">
                 <div class="card-heading">
                   <div class="icon">
                     <i class="fas fa-coins"></i>
                   </div>
                   <div class="info">
-                    <h1 class="value">Rp.0.00</h1>
+                    <h1 class="value">Rp <?= $data["income"] ?></h1>
                     <span class="text">Income</span>
                   </div>
                 </div>
@@ -79,14 +79,14 @@
           </div>
           <div class="row">
             <div class="col-xl-3 col-sm-12 col-md-6 mt-5">
-              <a href="" class="card karyawan">
+              <a href="<?= BASEURL ?>/data_toko/karyawan" class="card karyawan">
                 <div class="card-heading">
                   <div class="icon">
                     <i class="fas fa-user-tie"></i>
                   </div>
                   <div class="info">
-                    <h1 class="value">5</h1>
-                    <span class="text">Jumlah Barang</span>
+                    <h1 class="value"><?= $data["karyawan"]["total"] ?></h1>
+                    <span class="text">Jumlah Karyawan</span>
                   </div>
                 </div>
                 <div class="card-body">
