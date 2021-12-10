@@ -43,5 +43,17 @@ class Pemesanan_model{
         $this->db->execute();
         return $this->db->single();
     }
+    
+    public function getSold(){
+        $this->db->query("SELECT SUM(qty) AS qty FROM pemesanan AS a
+                        JOIN pembayaran AS b
+                            ON a.id_pembayaran = b.id_pembayaran
+                        WHERE tanggal_pembayaran = CURRENT_DATE()");
+
+        $this->db->execute();
+        $result = $this->db->single()["qty"];
+        if($result) return $result;
+        return 0;
+    }
 
 }

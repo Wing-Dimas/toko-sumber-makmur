@@ -9,7 +9,7 @@
         <div class="container">
           <div class="row">
             <div class="col-xl-3 col-sm-12 col-md-6 mt-5">
-              <a href="<?= BASEURL ?>/data_toko/barang" class="card barang">
+              <a href="<?= BASEURL ?>/barang" class="card barang">
                 <div class="card-heading">
                   <div class="icon">
                     <i class="fas fa-box-open"></i>
@@ -26,13 +26,13 @@
               </a>
             </div>
             <div class="col-xl-3 col-sm-12 col-md-6 mt-5">
-              <a href="<?= BASEURL ?>/data_toko/barang" class="card barang-keluar">
+              <a href="<?= BASEURL ?>/pemesanan" class="card barang-keluar">
                 <div class="card-heading">
                   <div class="icon">
                     <i class="fas fa-arrow-up"></i>
                   </div>
                   <div class="info">
-                    <h1 class="value">10</h1>
+                    <h1 class="value"><?= $data["barang_terjual"] ?></h1>
                     <span class="text">Barang Keluar hari ini</span>
                   </div>
                 </div>
@@ -43,7 +43,7 @@
               </a>
             </div>
             <div class="col-xl-3 col-sm-12 col-md-6 mt-5">
-              <a href="<?= BASEURL ?>/data_toko/pelanggan" class="card pelanggan">
+              <a href="<?= BASEURL ?>/pelanggan" class="card pelanggan">
                 <div class="card-heading">
                   <div class="icon">
                     <i class="fas fa-users"></i>
@@ -60,7 +60,7 @@
               </a>
             </div>
             <div class="col-xl-3 col-sm-12 col-md-6 mt-5">
-              <a href="<?= BASEURL ?>/data_toko/pemesanan" class="card income">
+              <a href="<?= BASEURL ?>/pemesanan" class="card income">
                 <div class="card-heading">
                   <div class="icon">
                     <i class="fas fa-coins"></i>
@@ -79,7 +79,7 @@
           </div>
           <div class="row">
             <div class="col-xl-3 col-sm-12 col-md-6 mt-5">
-              <a href="<?= BASEURL ?>/data_toko/karyawan" class="card karyawan">
+              <a href="<?= BASEURL ?>/karyawan" class="card karyawan">
                 <div class="card-heading">
                   <div class="icon">
                     <i class="fas fa-user-tie"></i>
