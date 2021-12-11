@@ -1,3 +1,9 @@
+<?php
+  if(!isset($_SESSION["login"])){
+    header("Location: " . BASEURL . "/login");
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,11 +15,6 @@
     <link rel="stylesheet" href="<?=BASEURL ?>/css/style.css" />
   </head>
   <body>
-  <?php
-    if(!isset($_SESSION["login"])){
-      header("Location: " . BASEURL . "/login");
-    }
-  ?>
 
     <header>
       <div class="logo">
@@ -38,13 +39,19 @@
               <a class="nav-link" href="<?=BASEURL ?>/barang">Barang</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="<?=BASEURL ?>/supplier">Supplier</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="<?=BASEURL ?>/pemesanan">Pemesanan</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?=BASEURL ?>/karyawan">Karyawan</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?=BASEURL ?>/jabatan">Jabatan</a>
+            </li>
           </ul>
-          <span class="navbar-text"> Dimas Wing </span>
+          <a href="<?= BASEURL ?>/login/logout" class="btn btn-danger btn-lg active" role="button" aria-pressed="true"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </div>
       </nav>
     </header>

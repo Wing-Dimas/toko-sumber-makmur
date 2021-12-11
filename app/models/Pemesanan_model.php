@@ -56,4 +56,63 @@ class Pemesanan_model{
         return 0;
     }
 
+    public function addPemesanan($data)
+    {
+        var_dump($data);
+        echo "<br>";
+        var_dump($_SESSION);
+        echo "<br>";
+        for($i = 0; $i < count($data["id_barang"]); $i++){
+            // ambil data dari table barang
+            $this->db->query("SELECT * FROM barang WHERE id_barang=:id_barang");
+            $this->db->bind("id_barang",$data["id_barang"][$i]);
+            $this->db->execute();
+            $barang = $this->db->single();  
+            $total = $barang["harga_barang"] * $data["qty"][$i];
+
+            // masukan data
+            $this->db->query("INSERT INTO pemesanan(id_pembayaran,id_admin, id_pelanggan, id_barang, qty, total)
+                    VALUES (:id_pembayaran,:id_admin,:id_pelanggan,:id_barang,:qty,:total)");
+            $this->db->bind("id_pembayaran",$data["id_pembayaran"]);
+            $this->db->bind("id_admin",$_SESSION["id_admin"]);
+            $this->db->bind("id_pelanggan",$data["id_pelanggan"]);
+            $this->db->bind("id_barang",$data["id_barang"][$i]);
+            $this->db->bind("qty",$data["qty"][$i]);
+            $this->db->bind("total",$total);
+            $this->db->execute();
+        }
+        return $this->db->rowCount();
+    }
+
+
+    public function deletePemesanan($id)
+    {
+        $this->db->query("DELETE FROM pemesanan WHERE id_pemesanan=:id_pemesanan");
+        $this->db->bind("id_pemesanan",$id);
+        $this->db->execute();
+        return $this->db->rowCount();
+    }
+
+    public function getDataPemesananByNama($data)
+    {
+        $this->db->query("SELECT 
+                            id_pemesanan,
+                            p.id_pembayaran AS id_pembayaran, 
+                            tanggal_pembayaran,
+                            id_admin,
+                            nama_pelanggan,
+                            nama_barang,
+                            p.qty AS qty,
+                            p.total AS total
+                        FROM pemesanan AS p
+                        JOIN barang AS b
+                            ON b.id_barang = p.id_barang
+                        JOIN pelanggan
+                            ON pelanggan.id_pelanggan = p.id_pelanggan
+                        JOIN pembayaran
+                            ON pembayaran.id_pembayaran = p.id_pembayaran
+                        WHERE pelanggan.nama_pelanggan LIKE '%" . $data["cari"] . "%'");
+        $this->db->execute();
+        return $this->db->resultSet();
+    }
 }

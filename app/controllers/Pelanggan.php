@@ -58,5 +58,24 @@ class Pelanggan extends Controller
             header("Location: " . BASEURL ."/pelanggan");
         }
     }
-        
+
+    public function edit($id)
+    {
+        $data = $this->model("pelanggan_model")->getOneData($id);
+        $this->view("templates/header");
+        $this->view("pelanggan/edit_pelanggan",$data);
+        $this->view("templates/footer");
+    }
+
+    public function editPelanggan()
+    {
+        if($data = $data = $this->model("pelanggan_model")->updateData($_POST) > 0){
+            Flasher::setFlash("Pelanggan","berhasil","diupdate","success");
+            header("Location: " . BASEURL ."/pelanggan");
+        }else{
+            Flasher::setFlash("Pelanggan","gagal","diupdate","error");
+            header("Location: " . BASEURL ."/pelanggan");
+        }
+        $_POST = null;
+    }
 }

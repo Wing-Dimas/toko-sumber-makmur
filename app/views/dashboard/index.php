@@ -1,3 +1,5 @@
+<?php Flasher::flash() ?>
+
 <div class="container mt-5">
       <section class="top-wrapper">
         <h1>Dashboard</h1>

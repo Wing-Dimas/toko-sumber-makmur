@@ -1,3 +1,5 @@
+<?= Flasher::flash() ?>
+
 <section>
       <div class="container data mt-5">
         <h2><?= $data["daftar"]?></h2>
@@ -6,7 +8,7 @@
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
-          <a href="<?= BASEURL ?>/data_toko/tambah/<?= $data["add"] ?>" class="btn btn-success btn-sm"><i class="fas fa-plus"></i> Tambah data</a>
+          <a href="<?= BASEURL ?>/karyawan/tambah" class="btn btn-success btn-sm"><i class="fas fa-plus"></i> Tambah data</a>
         </div>
         <div class="table-container mt-5">
 <table class="table table-striped">
@@ -31,8 +33,8 @@
                 <td><?= $employee["nomor_hp_karyawan"] ?></td>
                 <td><?= $employee["status_karyawan"] ?></td>
                 <td>
-                  <a href="<?= BASEURL ?>/data_toko/edit_barang/<?= $item["id_barang"] ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
-                  <a href="<?= BASEURL ?>/data_toko/hapus_barang/<?= $item["id_barang"] ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Hapus</a>
+                  <a href="<?= BASEURL ?>/karyawan/edit/<?= $employee["id_karyawan"] ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                  <a href="<?= BASEURL ?>/karyawan/hapus/<?= $employee["id_karyawan"] ?>" class="btn btn-danger btn-sm tombol-hapus"><i class="fas fa-trash-alt"></i> Hapus</a>
                 </td>
             </tr>
         <?php endforeach;?>

@@ -1,32 +1,3 @@
-// $(function () {
-//   $(".tombolTambahData").on("click", function () {
-//     $("#judul-modal").html("Tambah Data Mahasiswa");
-//     $(".modal-footer button[type=submit]").html("Tambah Data");
-//   });
-
-//   $(".tombolUbahData").on("click", function () {
-//     $("#judul-modal").html("Ubah Data Mahasiswa");
-//     $(".modal-footer button[type=submit]").html("Ubah Data");
-//     $(".modal-body form").attr("action", "http://localhost/belajarmvc/public/mahasiswa/ubah");
-
-//     const id = $(this).data("id");
-
-//     $.ajax({
-//       url: "http://localhost/belajarmvc/public/mahasiswa/getUbah",
-//       data: { id: id },
-//       method: "post",
-//       dataType: "json",
-//       success: function (data) {
-//         $("#nama").val(data.nama);
-//         $("#nim").val(data.nim);
-//         $("#email").val(data.email);
-//         $("#jurusan").val(data.jurusan);
-//         $("#id").val(data.id);
-//       },
-//     });
-//   });
-// });
-
 $(function () {
   const flash_table = $(".cek-alert").data("table");
   const flash_pesan = $(".cek-alert").data("pesan");
@@ -55,6 +26,25 @@ $(".tombol-hapus").on("click", function (e) {
     confirmButtonText: "Hapus",
   }).then((result) => {
     if (result.isConfirmed) {
+      document.location.href = href;
+    }
+  });
+});
+
+$(function () {
+  $(".tombol-tambah-pemesanan").on("click", async function (e) {
+    e.preventDefault();
+    let href = $(this).attr("href");
+    const { value: jumlah } = await Swal.fire({
+      title: "Mauskan jumlah barang",
+      input: "text",
+      inputLabel: "Jumlah barang",
+      inputPlaceholder: "Masukan Jumlah",
+      showCancelButton: true,
+    });
+
+    if (jumlah) {
+      href += "/" + jumlah;
       document.location.href = href;
     }
   });
