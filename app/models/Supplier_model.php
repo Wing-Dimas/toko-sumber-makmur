@@ -65,4 +65,9 @@ class Supplier_model
         return $this->db->rowCount();
     }
 
+    public function getDataSupplierByNama($data){
+        $this->db->query("SELECT * FROM supplier WHERE nama_supplier LIKE '%". $data["cari"] ."%'");
+        $this->db->execute();
+        return $this->db->resultSet();
+    }
 }

@@ -50,6 +50,9 @@
             <li class="nav-item">
               <a class="nav-link" href="<?=BASEURL ?>/jabatan">Jabatan</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?=BASEURL ?>/admin">Admin</a>
+            </li>
           </ul>
           <a href="<?= BASEURL ?>/login/logout" class="btn btn-danger btn-lg active" role="button" aria-pressed="true"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </div>

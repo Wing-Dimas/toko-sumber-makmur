@@ -68,4 +68,10 @@ class Jabatan_model
         $this->db->execute();
         return $this->db->resultSet();   
     }
+
+    public function getDataJabatanByNama($data){
+        $this->db->query("SELECT * FROM jabatan WHERE nama_jabatan LIKE '%".$data["cari"]."%'");
+        $this->db->execute();
+        return $this->db->resultSet();
+    }
 }

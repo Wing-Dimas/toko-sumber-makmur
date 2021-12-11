@@ -70,6 +70,16 @@ class Pemesanan_model{
             $barang = $this->db->single();  
             $total = $barang["harga_barang"] * $data["qty"][$i];
 
+            // kurangi barang
+            $stok_barang = (integer)$barang["stok_barang"];
+            $qty = (integer)$data["qty"][$i];
+            $barang_berkurang = $stok_barang - $qty;
+            
+            $this->db->query("UPDATE barang SET stok_barang = :stok_barang_baru WHERE id_barang=:id_barang");
+            $this->db->bind("stok_barang_baru",$barang_berkurang);
+            $this->db->bind("id_barang",$barang["id_barang"]);
+            $this->db->execute();
+
             // masukan data
             $this->db->query("INSERT INTO pemesanan(id_pembayaran,id_admin, id_pelanggan, id_barang, qty, total)
                     VALUES (:id_pembayaran,:id_admin,:id_pelanggan,:id_barang,:qty,:total)");

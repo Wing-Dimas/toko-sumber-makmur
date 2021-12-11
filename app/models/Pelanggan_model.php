@@ -86,4 +86,11 @@ class Pelanggan_model{
         }
         return $this->db->rowCount();
     }
+
+    public function getDataPelangganByNama($data)
+    {
+        $this->db->query("SELECT * FROM pelanggan WHERE nama_pelanggan LIKE '%" . $data["cari"] . "%'");
+        $this->db->execute();
+        return $this->db->resultSet();
+    }
 }

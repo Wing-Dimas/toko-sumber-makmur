@@ -79,4 +79,15 @@ class Karyawan_model{
         }
         return $this->db->rowCount();
     }
+
+    public function getDataKaryawanByNama($data)
+    {
+        $this->db->query("SELECT * FROM karyawan AS k
+                        JOIN jabatan AS j 
+                            ON j.id_jabatan = k.id_jabatan
+                        WHERE nama_karyawan LIKE '%".$data["cari"]."%'");
+        $this->db->execute();
+        return $this->db->resultSet();
+    }
+    
 }

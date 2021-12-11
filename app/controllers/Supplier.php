@@ -63,4 +63,15 @@ class Supplier extends Controller
         }
         $_POST = null;
     }
+
+    public function cari()
+    {
+        $data["judul"] = "Data Supplier";
+        $data["daftar"] = "Daftar Supplier";
+        $data["supplier"] = $this->model("supplier_model")->getDataSupplierByNama($_POST);
+        $this->view("templates/header",$data);
+        $this->view("data_toko/supplier",$data);
+        $this->view("templates/footer");
+        $_POST = null;
+    }
 }

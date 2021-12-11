@@ -6,7 +6,6 @@ class Pelanggan extends Controller
     {
         $data["judul"] = "Data Pelanggan";
         $data["daftar"] = "Daftar Pelanggan";
-        $data["add"] = "pelanggan";
         $data["customers"] = $this->model("pelanggan_model")->getDataPelanggan();
         $this->view("templates/header",$data);
         $this->view("data_toko/pelanggan",$data);
@@ -69,13 +68,24 @@ class Pelanggan extends Controller
 
     public function editPelanggan()
     {
-        if($data = $data = $this->model("pelanggan_model")->updateData($_POST) > 0){
+        if($this->model("pelanggan_model")->updateData($_POST) > 0){
             Flasher::setFlash("Pelanggan","berhasil","diupdate","success");
             header("Location: " . BASEURL ."/pelanggan");
         }else{
             Flasher::setFlash("Pelanggan","gagal","diupdate","error");
             header("Location: " . BASEURL ."/pelanggan");
         }
+        $_POST = null;
+    }
+
+    public function cari()
+    {
+        $data["judul"] = "Data Pelanggan";
+        $data["daftar"] = "Daftar Pelanggan";
+        $data["customers"] = $this->model("pelanggan_model")->getDataPelangganByNama($_POST);
+        $this->view("templates/header",$data);
+        $this->view("data_toko/pelanggan",$data);
+        $this->view("templates/footer");
         $_POST = null;
     }
 }

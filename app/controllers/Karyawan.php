@@ -68,4 +68,15 @@ class karyawan extends Controller
             header("Location: " . BASEURL ."/karyawan");
         }
     }
+
+    public function cari(){
+        $data["judul"] = "Data Karyawan";
+        $data["daftar"] = "Daftar Karyawan";
+        $data["employees"] = $this->model("karyawan_model")->getDataKaryawanByNama($_POST);
+        $this->view("templates/header",$data);
+        $this->view("data_toko/karyawan",$data);
+        $this->view("templates/footer");
+        $_POST = null;
+    }
+
 }

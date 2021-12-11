@@ -74,4 +74,11 @@ class Barang_model{
         }
         return $this->db->rowCount();
     }
+
+    public function getDataBarangByNama($data)
+    {
+        $this->db->query("SELECT * FROM barang WHERE nama_barang LIKE '%". $data["cari"] ."%'");
+        $this->db->execute();
+        return $this->db->resultSet();
+    }
 }

@@ -67,4 +67,14 @@ class Jabatan extends Controller
             header("Location: " . BASEURL ."/jabatan");
         }
     }
+
+    public function cari(){
+        $data["judul"] = "Data Jabatan";
+        $data["daftar"] = "Daftar Jabatan";
+        $data["jabatan"] = $this->model("jabatan_model")->getDataJabatanByNama($_POST);
+        $this->view("templates/header",$data);
+        $this->view("data_toko/jabatan",$data);
+        $this->view("templates/footer");
+        $_POST = null;
+    }
 }
